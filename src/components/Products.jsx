@@ -76,12 +76,19 @@ function Products() {
           <Button variant="primary" onClick={() => Cart(product)}>
             Add To Cart
           </Button>
-          <span style={{ padding: "5px", backgroundColor: "ButtonFace" }}>
+          <span
+            style={{
+              padding: "5px",
+              backgroundColor: "ButtonFace ",
+              borderRadius: "5px",
+              fontWeight: "700",
+            }}
+          >
             {/* Rating:{product.rating.rate} */}
+            Rs:{product.price}{" "}
           </span>
         </Card.Footer>
         <span style={{ display: "flex", justifyContent: "space-between" }}>
-          PKR:{product.price}{" "}
           <span style={{ padding: "5px", backgroundColor: "" }}>
             {" "}
             {/* Available:{product.rating.count} */}

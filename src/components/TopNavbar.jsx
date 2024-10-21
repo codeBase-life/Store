@@ -26,7 +26,15 @@ function TopNavbar() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              <Nav.Link as={Link} to="/cart">
+              <Nav.Link
+                as={Link}
+                to="/cart"
+                style={{
+                  backgroundColor: "skyblue",
+                  padding: "5px",
+                  borderRadius: "5px",
+                }}
+              >
                 Cart {counts.length}
               </Nav.Link>
             </Navbar.Text>

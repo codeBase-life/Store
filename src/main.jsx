@@ -14,6 +14,7 @@ import Products from "./components/Products.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 import Cart from "./CartComponents/Cart.jsx";
 import CartBootstrap from "./CartComponents/CartBootstrap.jsx";
+import CartPayment from "./CartComponents/CartPayment.jsx";
 
 const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/cart",
-        element: <Cart />,
+        element: <CartPayment />,
       },
       // {
       //   path: "/cartbootstrap",
