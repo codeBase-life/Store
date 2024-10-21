@@ -100,7 +100,7 @@ function Products() {
 
   if (loading) {
     return (
-      <div className="spinner-container">
+      <div className=" flex justify-center items-center h-screen ">
         <Spinner animation="border" variant="dark" />
       </div>
     );
