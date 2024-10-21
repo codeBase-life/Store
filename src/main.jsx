@@ -12,8 +12,7 @@ import PrivateRoute from "./components/PrivateRoute.jsx";
 import AddProducts from "./components/AddProducts.jsx";
 import Products from "./components/Products.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
-import Cart from "./CartComponents/Cart.jsx";
-import CartBootstrap from "./CartComponents/CartBootstrap.jsx";
+
 import CartPayment from "./CartComponents/CartPayment.jsx";
 
 const router = createBrowserRouter([
