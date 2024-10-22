@@ -14,6 +14,7 @@ import Products from "./components/Products.jsx";
 import ErrorPage from "./components/ErrorPage.jsx";
 
 import CartPayment from "./CartComponents/CartPayment.jsx";
+import ThankYou from "./Thanks/ThankYou.jsx";
 
 const router = createBrowserRouter([
   {
@@ -41,10 +42,10 @@ const router = createBrowserRouter([
         path: "/cart",
         element: <CartPayment />,
       },
-      // {
-      //   path: "/cartbootstrap",
-      //   element: <CartBootstrap />,
-      // },
+      {
+        path: "/thanks",
+        element: <ThankYou />,
+      },
 
       {
         path: "/*",

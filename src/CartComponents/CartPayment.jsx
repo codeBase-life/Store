@@ -119,7 +119,9 @@ function CartPayment() {
         <button className="w-full mt-4 bg-teal-500 p-2 rounded text-white ">
           {/* <span>$4818.00</span> */}
           <span>
-            CHECKOUT <FontAwesomeIcon icon={faArrowRight} />
+            <Link to="/thanks">
+              CHECKOUT <FontAwesomeIcon icon={faArrowRight} />
+            </Link>
           </span>
         </button>
       </div>
