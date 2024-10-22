@@ -8,6 +8,7 @@ import {
 } from "../state/cartSlice";
 import { faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import QrCode from "./qrCode";
 
 const CartItem = ({ image, alt, title, description, price, id, quantity }) => {
   const cart = useSelector((item) => item.cartSlice);
@@ -33,6 +34,9 @@ const CartItem = ({ image, alt, title, description, price, id, quantity }) => {
           <div className="font-semibold">{title}</div>
           <div className="text-gray-500">{description}</div>
         </div>
+        <div className=" mr-10">
+          <QrCode title={title} price={price} description={description} />
+        </div>
         <div className="flex items-center space-x-4">
           <button
             className="px-2 py-1 bg-gray-200 rounded"
@@ -49,7 +53,7 @@ const CartItem = ({ image, alt, title, description, price, id, quantity }) => {
           </button>
 
           <span className="font-semibold">$ {price}</span>
-          {/* <i className="fas fa-trash-alt text-gray-500"></i> */}
+
           <span
             className=" text-gray-500 cursor-pointer"
             onClick={() => removeItem(id)}

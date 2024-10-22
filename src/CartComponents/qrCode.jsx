@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import QRCode from "react-qr-code"; // Assuming you are using 'qrcode.react' library
 
-const QrCode = ({ title, price }) => {
+const QrCode = ({ title, price, description }) => {
   const [qrData, setQrData] = useState("");
 
   useEffect(() => {
     const product = {
       name: title,
       price: price,
-      description: "This is a sample product.",
+      description: description ? description : "this is a sample product",
     };
 
     const productDetails = `Name: ${product.name}\nPrice: ${product.price}\nDescription: ${product.description}`;
