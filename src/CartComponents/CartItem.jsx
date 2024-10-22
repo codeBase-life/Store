@@ -25,41 +25,42 @@ const CartItem = ({ image, alt, title, description, price, id, quantity }) => {
   };
   return (
     <>
-      <div
-        className="flex items-center bg-white p-4 rounded-lg shadow-md"
-        key={id}
-      >
-        <img src={image} alt={alt} className="w-16 h-16 rounded mr-4" />
-        <div className="flex-grow">
-          <div className="font-semibold">{title}</div>
-          <div className="text-gray-500">{description}</div>
-        </div>
-        <div className=" mr-10">
-          <QrCode title={title} price={price} description={description} />
-        </div>
-        <div className="flex items-center space-x-4">
-          <button
-            className="px-2 py-1 bg-gray-200 rounded"
-            onClick={() => handleDecrement(id)}
-          >
-            -
-          </button>
-          <span>{quantity}</span>
-          <button
-            className="px-2 py-1 bg-gray-200 rounded"
-            onClick={() => handleIncrement(id)}
-          >
-            +
-          </button>
-
-          <span className="font-semibold">$ {price}</span>
-
-          <span
-            className=" text-gray-500 cursor-pointer"
-            onClick={() => removeItem(id)}
-          >
-            <FontAwesomeIcon icon={faTrash} />
+      <div className="flex flex-col sm:flex-row items-center bg-white p-4 rounded-lg shadow-md mb-4 w-full">
+        <img
+          src={image}
+          alt={alt}
+          className="w-full sm:w-1/4 rounded-lg mb-4 sm:mb-0"
+        />
+        <div className="flex flex-col sm:flex-row sm:justify-between w-full sm:ml-4">
+          <div className="flex flex-col mb-4 sm:mb-0">
+            <h2 className="text-lg font-semibold">{title}</h2>
+            <p className="text-gray-600">{description}</p>
+            <span className="text-gray-800 font-bold">${price}</span>
+          </div>
+          <span>
+            <QrCode />
           </span>
+          <div className="flex items-center space-x-4">
+            <button
+              onClick={() => handleDecrement(id)}
+              className="bg-gray-200 p-2 rounded"
+            >
+              -
+            </button>
+            <span>{quantity}</span>
+            <button
+              onClick={() => handleIncrement(id)}
+              className="bg-gray-200 p-2 rounded"
+            >
+              +
+            </button>
+            <button
+              onClick={() => removeItem(id)}
+              className="bg-red-500 p-2 rounded text-white"
+            >
+              <FontAwesomeIcon icon={faTrash} />
+            </button>
+          </div>
         </div>
       </div>
     </>
