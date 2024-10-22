@@ -63,7 +63,7 @@ function CartPayment() {
           </div>
         ))}
       </div>
-      <div className="w-1/3 ml-6 bg-blue-600 p-6 rounded-lg shadow-md text-white">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 ml-0 sm:ml-6 bg-blue-600 p-4 sm:p-6 rounded-lg shadow-md text-white">
         <div className="flex items-center mb-4">
           <span className="text-lg font-semibold">Card details</span>
           <span className="ml-auto rounded-full">
@@ -73,7 +73,6 @@ function CartPayment() {
         <div className="mb-4">
           <span className="text-sm">Card type</span>
           <div className="flex space-x-2 mt-2">
-            {/* <img src= alt="Mastercard" /> */}
             <FontAwesomeIcon icon={faCcMastercard} />
             <FontAwesomeIcon icon={faStripe} />
             <FontAwesomeIcon icon={faCcVisa} />
@@ -91,16 +90,16 @@ function CartPayment() {
             placeholder="Card Number"
             className="w-full p-2 rounded bg-blue-500 placeholder-white"
           />
-          <div className="flex space-x-4">
+          <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
             <input
               type="text"
               placeholder="Expiration"
-              className="w-1/2 p-2 rounded bg-blue-500 placeholder-white"
+              className="w-full sm:w-1/2 p-2 rounded bg-blue-500 placeholder-white"
             />
             <input
               type="text"
               placeholder="Cvv"
-              className="w-1/2 p-2 rounded bg-blue-500 placeholder-white"
+              className="w-full sm:w-1/2 p-2 rounded bg-blue-500 placeholder-white"
             />
           </div>
         </div>
@@ -118,8 +117,7 @@ function CartPayment() {
             <span>$ {totalPrice ? totalPrice + shippingFee : 0}</span>
           </div>
         </div>
-        <button className="w-full mt-4 bg-teal-500 p-2 rounded text-white ">
-          {/* <span>$4818.00</span> */}
+        <button className="w-full mt-4 bg-teal-500 p-2 rounded text-white">
           <span>
             <Link to="/thanks">
               CHECKOUT <FontAwesomeIcon icon={faArrowRight} />
