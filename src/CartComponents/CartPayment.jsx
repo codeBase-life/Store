@@ -5,6 +5,10 @@ import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import CartItem from "./CartItem";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
+import { faCcMastercard, faCcPaypal } from "@fortawesome/free-brands-svg-icons";
+import { faStripe } from "@fortawesome/free-brands-svg-icons/faStripe";
+import { faCcVisa } from "@fortawesome/free-brands-svg-icons";
+import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
 
 import "../index.css";
 
@@ -60,19 +64,18 @@ function CartPayment() {
       <div className="w-1/3 ml-6 bg-blue-600 p-6 rounded-lg shadow-md text-white">
         <div className="flex items-center mb-4">
           <span className="text-lg font-semibold">Card details</span>
-          <img
-            src="https://placehold.co/40x40"
-            alt="User profile"
-            className="ml-auto rounded-full"
-          />
+          <span className="ml-auto rounded-full">
+            <FontAwesomeIcon icon={faCartShopping} />
+          </span>
         </div>
         <div className="mb-4">
           <span className="text-sm">Card type</span>
           <div className="flex space-x-2 mt-2">
-            <img src="https://placehold.co/40x20" alt="Mastercard" />
-            <img src="https://placehold.co/40x20" alt="Visa" />
-            <img src="https://placehold.co/40x20" alt="American Express" />
-            <img src="https://placehold.co/40x20" alt="PayPal" />
+            {/* <img src= alt="Mastercard" /> */}
+            <FontAwesomeIcon icon={faCcMastercard} />
+            <FontAwesomeIcon icon={faStripe} />
+            <FontAwesomeIcon icon={faCcVisa} />
+            <FontAwesomeIcon icon={faCcPaypal} />
           </div>
         </div>
         <div className="space-y-4">
