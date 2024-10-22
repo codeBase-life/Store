@@ -27,12 +27,14 @@ function CartPayment() {
   });
 
   return (
-    <div className="flex justify-center items-start p-10 bg-gray-100 min-h-screen">
-      <div className="w-2/3 bg-white p-6 rounded-lg shadow-md">
+    <div className="flex justify-center items-start p-10  min-h-screen sm:p-6 md:p-10 bg-gray-100">
+      <div className=" w-full sm:w-3/4 md:w-2/3 bg-whitep-4 sm:p-6 md:p-8 rounded-lg shadow-md">
         <div className="flex items-center mb-4">
           <Link to="/">
             <FontAwesomeIcon icon={faArrowLeft} />
-            <span className="text-lg font-semibold">Continue shopping</span>
+            <span className="text-lg font-semibold ml-2">
+              Continue shopping
+            </span>
           </Link>
         </div>
         <div className="border-b pb-2 mb-4">
