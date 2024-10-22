@@ -27,8 +27,8 @@ function CartPayment() {
   });
 
   return (
-    <div className="flex justify-center items-start p-10  min-h-screen sm:p-6 md:p-10 bg-gray-100">
-      <div className=" w-full sm:w-3/4 md:w-2/3 bg-whitep-4 sm:p-6 md:p-8 rounded-lg shadow-md">
+    <div className="flex flex-col sm:flex-row justify-center items-start p-10 min-h-screen sm:p-6 md:p-10 bg-gray-100">
+      <div className="w-full sm:w-3/4 md:w-2/3 bg-white p-4 sm:p-6 md:p-8 rounded-lg shadow-md mb-6 sm:mb-0">
         <div className="flex items-center mb-4">
           <Link to="/">
             <FontAwesomeIcon icon={faArrowLeft} />
@@ -63,7 +63,7 @@ function CartPayment() {
           </div>
         ))}
       </div>
-      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 ml-0 sm:ml-6 bg-blue-600 p-4 sm:p-6 rounded-lg shadow-md text-white">
+      <div className="w-full sm:w-2/3 md:w-1/2 lg:w-1/3 bg-blue-600 p-4 sm:p-6 rounded-lg shadow-md text-white">
         <div className="flex items-center mb-4">
           <span className="text-lg font-semibold">Card details</span>
           <span className="ml-auto rounded-full">
